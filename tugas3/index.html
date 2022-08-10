@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tugas3Prak</title>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <body class="bg-amber-600 w-full h-screen">
+    <div
+      class="h-screen w-full flex justify-center items-center flex-col"
+      id="app"
+    >
+    
+  <!--img class="w-250 rounded-full" :src="profileUser" alt="">
+    <h1> {{nameUser}} {{nameLast}}</h1-->
+    <h1 class="font-bold text-[50px] text-zinc-100 "> Ayo Pilih Menu disini </h1>
+
+    <div class="flex gap-10">
+      <button class="bg-black p-2 m-2 rounded-full w-fit text-white font-semibold" @click="pilihMakanan()"> Lihat Menu Makanan </button>
+      <button class="bg-black p-2 m-2 rounded-full w-fit text-white font-semibold" @click="pilihMinuman()"> Lihat Menu Minuman </button>
+    </div>
+    
+    <div id="menu" class="text-stone-50"> 
+      <ul v-for="(data, index) in Makanan">
+        {{index+1}} {{data.nama}} {{data.rasa}}
+      </ul>
+    </div>
+    <div id="menu" class="text-stone-50">
+      <ul v-for="(data, index) in Minuman">
+        {{index+1}} {{data.nama}} {{data.rasa}}
+      </ul>
+    </div>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
